@@ -1,0 +1,7 @@
+<?php
+/*
+Enter your username and password here.
+*/
+$vpnukUsername = 'vpnukXXXXX';
+$vpnukPassword = 'XXXXX';
+?>
