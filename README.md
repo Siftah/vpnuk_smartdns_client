@@ -15,6 +15,15 @@ Assuming you have the necessary PHP components installed and the path to php is 
 `chmod +x vpnuk_smartdns_client.php`
 `./vpnuk_smartdns_client.php`
 
+# Works well with...
+If you're using Digital Ocean for your hosting you may wish to use this in combination with the following script which will automatically update a DNS entry on Digital Ocean when your IP changes;
+https://github.com/Siftah/Digital-Ocean-Dynamic-DNS-Updater
+
+The two work well together from a crontab like this;
+> */15 * * * * $HOME/Digital-Ocean-Dynamic-DNS-Updater/updater.php [token] [domain.net] [@] [A] $HOME/vpnuk_smartdns_client/vpnuk_smartdns_client.php
+
+The SmartDNS client will only be updated when the DNS changes.
+
 # Disclaimer
 This is in no way affiliated to, endorsed by or even remotely linked to http://www.vpnuk.net/
 
